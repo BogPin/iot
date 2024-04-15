@@ -51,6 +51,7 @@ class Datasource:
 
     async def connect_to_server(self):
         uri = f"ws://{STORE_HOST}:{STORE_PORT}/ws/"
+        print(uri)
         while True:
             Logger.debug("CONNECT TO SERVER")
             async with websockets.connect(uri) as websocket:
